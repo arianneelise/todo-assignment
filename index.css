@@ -39,6 +39,12 @@ input {
   padding-left: 10px;
   margin: 2px;
   border-radius: 4px;
+  transition: ease-in-out 0.2s;
+}
+
+.item:hover {
+  background-color: rgb(235, 248, 247);
+  cursor: default;
 }
 
 .item button {
@@ -65,6 +71,24 @@ ul {
   justify-content: center;
 }
 
+.trash-button {
+  float: right;
+  margin-right: -26px;
+  margin-top: -31px;
+  border: none;
+  background-color: transparent;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.trash-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
 .list-wrapper div {
   background-color: white;
   padding: 10px 40px 40px 40px;
@@ -77,4 +101,8 @@ ul {
 
 .list-wrapper div h3 {
   font-size: 24px;
+}
+
+.clock {
+  color: #8c4ae9;
 }
