@@ -43,7 +43,7 @@ input {
 }
 
 .item:hover {
-  background-color: rgb(235, 248, 247);
+  background-color: rgb(249, 251, 251);
   cursor: default;
 }
 
@@ -57,7 +57,7 @@ input {
 
 .item button:hover {
   cursor: pointer;
-  color: rgb(139, 226, 133);
+  opacity: 0.7;
 }
 
 ul {
@@ -77,11 +77,6 @@ ul {
   margin-top: -31px;
   border: none;
   background-color: transparent;
-  display: none;
-}
-
-.show {
-  display: block;
 }
 
 .trash-button:hover {
@@ -89,7 +84,8 @@ ul {
   opacity: 0.6;
 }
 
-.list-wrapper div {
+.todo-list,
+.completed-todo-list {
   background-color: white;
   padding: 10px 40px 40px 40px;
   margin: 40px;
@@ -99,10 +95,27 @@ ul {
   color: rgb(48, 47, 47);
 }
 
-.list-wrapper div h3 {
+.list-wrapper h3 {
   font-size: 24px;
 }
 
 .clock {
   color: #8c4ae9;
+}
+
+p {
+  margin: 0;
+  display: inline;
+}
+
+.list-item {
+  display: none;
+}
+
+.completed-item {
+  display: none;
+}
+
+.show {
+  display: block;
 }

@@ -13,28 +13,49 @@
   </head>
   <body>
     <div class="list-wrapper">
-      <div>
+      <div class="todo-list">
         <h3>To-Do List</h3>
         <ul class="todo">
           <li>
-            <input
-              type="text"
-              name="todo-input"
-              placeholder="Add your new to-do"
-            />
-            <button class="add-button">
-              <i class="fa-solid fa-plus fa-xl"></i>
-            </button>
+            <form>
+              <input
+                type="text"
+                name="todo-input"
+                class="todo-input"
+                placeholder="Add your new to-do"
+              />
+              <button class="add-button">
+                <i class="fa-solid fa-plus fa-xl"></i>
+              </button>
+            </form>
           </li>
-          <li class="todo item">Make a lot of cake<button><i class="fa-solid fa-circle-check fa-xl"></i></button></li><button class="trash-button"><i class="fa-solid fa-trash-can fa-sm"></i></button>
-          <li class="todo item">Eat a lot of cake<button><i class="fa-solid fa-circle-check fa-xl"></i></li><button class="trash-button"><i class="fa-solid fa-trash-can fa-sm"></i></button>
-          <li class="todo item">Watch Lincoln Lawyer<button><i class="fa-solid fa-circle-check fa-xl"></i></li><button class="trash-button"><i class="fa-solid fa-trash-can fa-sm"></i></button>
+          <div class="list-item default">
+            <div class="item empty">
+              <p></p>
+              <button id="check-button">
+                <i class="fa-solid fa-circle-check fa-xl"></i>
+              </button>
+            </div>
+            <button class="trash-button delete">
+              <i class="fa-solid fa-trash-can fa-sm delete"></i>
+            </button>
+          </div>
         </ul>
       </div>
-      <div>
+      <div class="completed-todo-list">
         <h3>Completed To-Do's</h3>
         <ul class="completed">
-          <li class="completed item">You haven't completed anything<button><i class="fa-solid clock fa-clock-rotate-left fa-xl"></i></button></li><button class="trash-button"><i class="fa-solid fa-trash-can fa-sm"></i></button>
+          <div class="completed-item">
+            <li class="item default-complete">
+              <p></p>
+              <button class="revert">
+                <i class="fa-solid clock revert fa-clock-rotate-left fa-xl"></i>
+              </button>
+            </li>
+            <button class="trash-button delete">
+              <i class="fa-solid fa-trash-can fa-sm delete"></i>
+            </button>
+          </div>
         </ul>
       </div>
     </div>
