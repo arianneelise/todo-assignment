@@ -12,7 +12,7 @@ function addListItem(e, content = null) {
     document.querySelector(".todo-input").value = "";
   }
 
-  const p = document.querySelector("p");
+  const p = document.querySelector(".list-text");
   p.innerHTML = `${listItem}`;
   const listDefault = document.querySelector(".default");
   const newDiv = listDefault.cloneNode((deep = true));
@@ -39,9 +39,11 @@ function completeListItem(e) {
   itemToComplete.remove();
 
   const completeList = document.querySelector(".completed-item");
-  console.log("Element:", completeList.firstElementChild);
   completeList.firstElementChild.firstElementChild.innerText = textToTransfer;
-  completeList.classList.add("show");
+  const newListItem = completeList.cloneNode((deep = true));
+  newListItem.classList.add("show");
+  const ul = document.querySelector(".completed");
+  ul.appendChild(newListItem);
 }
 
 function revertListItem(e) {
